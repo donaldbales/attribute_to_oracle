@@ -1,2 +1,2 @@
 # attribute_to_oracle
-How does Rails map its attributes to Oracle?
+How does Ruby on Rails map it's scaffolded data types to Oracle?
