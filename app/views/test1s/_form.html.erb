@@ -1,0 +1,61 @@
+<%= form_for(@test1) do |f| %>
+  <% if @test1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@test1.errors.count, "error") %> prohibited this test1 from being saved:</h2>
+
+      <ul>
+      <% @test1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :attribute_binary %><br>
+    <%= f.text_field :attribute_binary %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_boolean %><br>
+    <%= f.check_box :attribute_boolean %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_date %><br>
+    <%= f.date_select :attribute_date %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_datetime %><br>
+    <%= f.datetime_select :attribute_datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_decimal %><br>
+    <%= f.text_field :attribute_decimal %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_float %><br>
+    <%= f.text_field :attribute_float %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_integer %><br>
+    <%= f.number_field :attribute_integer %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_references_id %><br>
+    <%= f.text_field :attribute_references_id %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_string %><br>
+    <%= f.text_field :attribute_string %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_text %><br>
+    <%= f.text_area :attribute_text %>
+  </div>
+  <div class="field">
+    <%= f.label :attribute_time %><br>
+    <%= f.time_select :attribute_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

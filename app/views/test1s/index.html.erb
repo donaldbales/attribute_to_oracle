@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Test1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute binary</th>
+      <th>Attribute boolean</th>
+      <th>Attribute date</th>
+      <th>Attribute datetime</th>
+      <th>Attribute decimal</th>
+      <th>Attribute float</th>
+      <th>Attribute integer</th>
+      <th>Attribute references</th>
+      <th>Attribute string</th>
+      <th>Attribute text</th>
+      <th>Attribute time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test1s.each do |test1| %>
+      <tr>
+        <td><%= test1.attribute_binary %></td>
+        <td><%= test1.attribute_boolean %></td>
+        <td><%= test1.attribute_date %></td>
+        <td><%= test1.attribute_datetime %></td>
+        <td><%= test1.attribute_decimal %></td>
+        <td><%= test1.attribute_float %></td>
+        <td><%= test1.attribute_integer %></td>
+        <td><%= test1.attribute_references %></td>
+        <td><%= test1.attribute_string %></td>
+        <td><%= test1.attribute_text %></td>
+        <td><%= test1.attribute_time %></td>
+        <td><%= link_to 'Show', test1 %></td>
+        <td><%= link_to 'Edit', edit_test1_path(test1) %></td>
+        <td><%= link_to 'Destroy', test1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test1', new_test1_path %>
